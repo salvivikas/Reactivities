@@ -7,13 +7,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<AppDbContext>(options =>  
+builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration .GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddCors();
 
 var app = builder.Build();
 
+app.UseRouting();
+
+app.UseCors(x =>
+{
+    x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:5173");
+});
 // Configure the HTTP request pipeline.
 app.MapControllers();
 

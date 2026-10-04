@@ -1,0 +1,21 @@
+# EditorConfig helps maintain consistent coding styles across different IDEs
+# See https://editorconfig.org
+root = true
+
+# Core rules for all files
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Target specific React / frontend extensions
+[*.{js,jsx,ts,tsx,json,css,scss}]
+indent_style = space
+indent_size = 2
+
+# Keep markdown files from breaking on trailing whitespace trims
+[*.md]
+trim_trailing_whitespace = false
