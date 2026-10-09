@@ -1,9 +1,9 @@
 ﻿using Domain;
 using MediatR;
-using Persistance;
 using Microsoft.EntityFrameworkCore;
+using Persistance;
 
-namespace Application.Actvities.Queries;
+namespace Application.Actvities;
 
 public class GetActivityList
 {

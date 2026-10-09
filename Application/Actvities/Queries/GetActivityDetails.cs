@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistance;
 
-namespace Application.Actvities.Queries
+namespace Application.Actvities
 {
     public class GetActivityDetails
     {

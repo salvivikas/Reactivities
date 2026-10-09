@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain;
 using MediatR;
-using Persistance;
 using Microsoft.EntityFrameworkCore;
+using Persistance;
 
-namespace Application.Actvities.Commands;
+namespace Application.Actvities;
 
 public class DeleteActivity
 {

@@ -1,10 +1,10 @@
+using AutoMapper;
 using Domain;
 using MediatR;
-using Persistance;
 using Microsoft.EntityFrameworkCore;
-using AutoMapper;
+using Persistance;
 
-namespace Application.Actvities.Commands;
+namespace Application.Actvities;
 
 public class EditActivity : IRequest
 {

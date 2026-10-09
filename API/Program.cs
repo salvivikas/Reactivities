@@ -1,4 +1,4 @@
-using Application.Actvities.Queries;
+using Application.Actvities;
 using Application.Core;
 using Microsoft.EntityFrameworkCore;
 using Persistance;

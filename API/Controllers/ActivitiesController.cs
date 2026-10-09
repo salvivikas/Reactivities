@@ -1,7 +1,5 @@
-using Application.Actvities.Commands;
-using Application.Actvities.Queries;
+using Application.Actvities;
 using Domain;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;

@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain;
 using MediatR;
 using Persistance;
 
-namespace Application.Actvities.Commands;
+namespace Application.Actvities;
 
 public class CreateActivity
 {
