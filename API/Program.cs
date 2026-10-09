@@ -1,7 +1,13 @@
+using Application.Actvities.Queries;
+using Application.Core;
 using Microsoft.EntityFrameworkCore;
 using Persistance;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add this line to register the default 'v1' document configuration
+builder.Services.AddOpenApi();
 
 // Add services to the container.
 
@@ -12,8 +18,18 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration .GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddCors();
+builder.Services.AddMediatR(x =>
+    x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>());
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
+
+// Enable OpenAPI and Scalar UI in development mode
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.MapScalarApiReference();
+}
 
 app.UseRouting();
 
