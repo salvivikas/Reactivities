@@ -15,6 +15,7 @@ insert_final_newline = true
 [*.{js,jsx,ts,tsx,json,css,scss}]
 indent_style = space
 indent_size = 2
+max_line_length = 200
 
 # Keep markdown files from breaking on trailing whitespace trims
 [*.md]
